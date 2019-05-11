@@ -1,0 +1,12 @@
+Using the linux command line
+
+ls - short for "list", readout of all files and folders in your current directory
+cd - short for "change directory"
+.  - short for "current directory"
+.. - short for "parent directory"
+pwd - for "present working directory"
+cd .  - for back one child file/folders
+cd .. _ for back two parent file/folders
+cd  - for back to tilda ~
+mkdir - short for "make directory"
+cp - short for "copy"

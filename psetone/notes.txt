@@ -1,0 +1,92 @@
+PBJ, SCRATCH, C, CLOUD is other peoples servers
+SYNTAX VS. PRINCIPLES OF C ARE THE KEY
+
+set variables into functions
+
+declare the variable as counter
+set counter = 0
+
+int counter = 0; // int is a number
+counter = counter + 1;
+counter += 1;
+counter ++;
+
+boolean expression and
+
+1st conditional
+
+if (x < y) // boolean expression
+{
+    printf("x is less than y\n");               // function
+}
+else
+{
+    printf("x is not less than y\n");           // function
+}
+
+2nd conditional - over optimization
+
+if (x < y) // boolean expression
+{
+    printf("x is less than y\n");               // function
+}
+else if
+{
+    printf("x is greater than y\n");            // function
+}
+else if (x == y)                                // represent equality, (=) represents assignment
+{
+    printf("x is equal to y\n");
+}
+
+less than, greater than, equal too
+desine decision of the program leads to this...
+
+3rd conditional
+
+if (x < y) // boolean expression
+{
+    printf("x is less than y\n");               // function
+}
+else if (x > y)
+{
+    printf("x is greater than y\n");            // function
+}
+else
+{
+    printf("x is equal to y\n");
+}
+
+loops
+
+repeats forever
+while (true)
+{
+    printf("Hello, World!\n");
+}
+
+repeats a number of times
+for (int i = 0; i < 50; i++)                        // intializes i to 0, checks if it's < 50, then adds 1 to the int, and executes the code
+{
+    printf("Hello, World!\n");
+}
+
+get user input
+get_string("What's your name?\n");                  // string is a sequence of characters
+answer = get_string("What's your name?\n");         // stores in variable
+string answer = get_string("What's your name?\n");  // define type by declaring it
+printf("%s", answer);                               // format code for string
+
+concatinate or join together
+string answer = get_string("What's your name?\n");  // define type by declaring it
+printf("Hello, %s", answer\n);                      // %s is format code for string
+Hello, What's your name? , answer (Paul)            // answer is the placeholder
+
+source code, complier, machine code
+input, algorithm, output
+
+format codes
+%c - char, %f - float, %i - int, %li, %s - string
+
+int, float, double, long, long long, for more precise math
+parity

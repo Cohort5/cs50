@@ -1,0 +1,19 @@
+binary(2) = 1, 2 ,4 , 16, 32, 64, 128, 256
+decimal level = 128541
+turn binary (01020406) into decimal numbers (21664256) =
+letters = ascii (A=65, B=66, etc.)
+bit(32) = 1, 2 ,4 , 16, 32, 64, 128, 256
+byte(8) = 0000000 / 11111111
+abstraction = taking minush
+RGB = red, green, blue
+input, algorithms, output
+phone book problem
+logorithms
+
+pseudocode
+functions, specific step or action
+conditions if, else if, else if, else - fork in the road
+boolean expression (yes or no) answer
+loop, go back to step (1 or 2)
+scratch
+
