@@ -11,7 +11,9 @@ int main(void)
         // l = get_int("What is the length? ");
     }
 
-    while (height < 0 || height > 8);  // breaks out of loop
+    // theory - height minus rows (h = 8, minus row = 4) = spaces
+
+    while (height < 0 || height > 8);  // height breaks out of loop
 
 
     for (int i = 1; i < height + 1; i++) // the amount of rows
@@ -25,9 +27,22 @@ int main(void)
         for (int j = 0; j < i; j ++) // amount of hashs per row
 
         {
-            printf("#");  // print hash marks
+            printf("#"  "");  // print hash marks
+
+            // printf("#");  // print hash marks
         }
-        printf("\n"); // print and adds new line
+
+            printf("  ");  // print hash marks
+
+        for (int j = 0; j < i; j ++) // amount of hashs per row
+
+        {
+            printf("" "#");  // print hash marks
+
+            // printf("#");  // print hash marks
+        }
+
+            printf("\n"); // print and adds new line
     }
 }
 

@@ -1,6 +1,3 @@
-// math.round
-
-
 int oneWhile(int anAmount) {
     amount = anAmount;
     int coins = 0;
