@@ -1,51 +1,34 @@
 #include <cs50.h>
+#include <math.h>
 #include <stdio.h>
 
 int main(void)
 {
-    int height;
+    int h;
 
     do
     {
-        height = get_int("What is the height? ");
+        h = get_int("What is the height? ");   // pyramid left and right
         // l = get_int("What is the length? ");
     }
+    while (h < 0 || h > 8);  // breaks out of loop
 
-    // theory - height minus rows (h = 8, minus row = 4) = spaces
-
-    while (height < 0 || height > 8);  // height breaks out of loop
-
-
-    for (int i = 1; i < height + 1; i++) // the amount of rows
+    for (int i = 1; i < h + 1; i++) // the amount of rows
 
     {
-        for (int k = 0; k < height - i; k++) // amount of spaces per row
+        for (int k = 0; k < h - i; k++) // spaces
         {
-            printf(" "); //spaces
+            printf(" "); //space
         }
 
-        for (int j = 0; j < i; j ++) // amount of hashs per row
+        for (int j = 0; j < i; j ++) // prints hash + rows
 
         {
-            printf("#"  "");  // print hash marks
-
-            // printf("#");  // print hash marks
+            printf("#");  // print hash marks
         }
-
-            printf("  ");  // print hash marks
-
-        for (int j = 0; j < i; j ++) // amount of hashs per row
-
-        {
-            printf("" "#");  // print hash marks
-
-            // printf("#");  // print hash marks
-        }
-
-            printf("\n"); // print and adds new line
+        printf("\n"); // print new line
     }
 }
-
 
 // vertical and horizontal loop inside and then concat - j
 // # recreate the pyramid, use (#) for bricks
