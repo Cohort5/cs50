@@ -99,8 +99,19 @@ void displayList()
 
 void freeList()
 {
+    if (curNode->low)
+    {
+        displayTreeOnEnter(curNode->low);
+    }
 
-}
+    if (curNode->high)
+    {
+        displayTreeOnEnter(curNode->high);
+    }
+
+    printf("%i ", curNode->value);
+
+}s
 
 int main(void)
 {
@@ -128,3 +139,9 @@ int main(void)
     // *intPointer = 47;
     // printf("b is %i\n", b);
 }
+
+/*dfsdfdf
+multi line comment
+][][][]
+][][]
+*/
