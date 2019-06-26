@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
+
 //minichallenge create the NODE for a binary tree.
 typedef struct NODE
 {
@@ -10,13 +11,18 @@ typedef struct NODE
     struct NODE *high;
 } NODE;
 
-NODE *rootNode;
-
 typedef struct QNODE
 {
-    nodeAddress *value;
+    NODE *node;
     struct QNODE *next;
 } QNODE;
+
+NODE *rootNode;
+QNODE *headNode;
+
+// Function declaration
+
+void addNode(int);
 
 void addNode(int value)
 {
@@ -138,7 +144,7 @@ void freeTree(NODE *curNode) {
     }
 
     free(curNode);
-}
+
 
 void populateTree()
 {
@@ -179,10 +185,57 @@ int main(void)
     displayTreeOnEnter(rootNode);
     printf("\n");
 
+    push(rootNode);
+    push(rootNode->low);
+    push(rootNode->high);
+
+    printf("%i\n", pop()->vaue); // == 10
+    printf("%i\n", pop()->vaue); // == 8
+
     freeTree(rootNode);
 
     // tests();
     // printf("%i\t%i\n", rootNode->low->value, rootNode->high->value);
+
+} //MAIN
+
+//create pushNode(addNode) for your que
+void push(NODE* address)
+{
+    QNODE *newNode = malloc(sizeof(QNODE));
+    newNode->value = address;
+    newNode->next = NULL;
+    if (headNode == NULL)
+    {
+        headNode = newQue;
+        return;
+    }
+    QNODE *trav = headNode;
+    while(trav->next != NULL)
+    {
+        trav = trav->next;
+    }
+
+    trav->next = newQNode;
+
+}
+
+NODE* pop()
+{
+
+// create popNode for your que
+// temp store headNode
+// return the address of the headNODE
+// reasign headNode
+// headNode = temp->next; // temp == headNode
+// return temp->node;
+
+
+    NODE *temp = heaNode->node;
+    QNODE *qTemp = heaNode;
+    freeNode = qTemp->next;
+    free(qTemp);
+    return temp;
 
 }
 
@@ -194,47 +247,14 @@ int main(void)
 //confirm code and test in valgrind return
 //peak - show's the item and length displays the item
 
-create quepop(trav) and (remove node)
-quepush(add) for your que
-//create pushNode(addNode) for your que
-void pushNode(int value)
-{
-    NODE *newNode = malloc(sizeof(NODE));
-    newNode->value = value;
-    newNode->next = NULL;
-    if (rootNode == NULL)
-    {
-        rootNode = newNode;
-        return;
-    }
-    NODE *trav = rootNode;
-    while(trav->next != NULL)
-    {
-        trav = trav->next;
-    }
+// create quepop(trav) and (remove node)
+// quepush(add) for your que
+// //create pushNode(addNode) for your que
 
-    trav->next = newNode;
 
-}
-//create popNode(removeNode) for your que
-void popNode(int value)
-{
-    //if empty list will crash
-    NODE *trav = rootNode;
-    if(rootNode->value == value)
-    {
-        rootNode = rootNode->next;
-        free(trav);
-        return;
-    }
-
-    while(trav->next->value != value)
-    {
-        trav = trav->next;
-    }
-    NODE *temp = trav->next;
-    trav->next = temp->next;
-    free(temp);
-
-}
-
+// DISPLAY LEVEL PRINT FORMAT
+start at root
+add any children
+print value
+get next item in que
+display one line in the correct order
